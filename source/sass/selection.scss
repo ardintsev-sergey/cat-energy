@@ -1,0 +1,153 @@
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+.selection__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 56px;
+  font-size: 60px;
+  font-weight: 500;
+  color: #000;
+}
+
+.selection__descr {
+  margin: 0;
+  padding: 0;
+  width: 325px;
+  margin-bottom: 66px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000;
+}
+
+.selection__about-service {
+  display: flex;
+  margin-bottom: 69px;
+}
+
+.selection__about-cat {
+  width: 569px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+}
+
+.selection__about-label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.selection__about-input {
+  margin-left: 14px;
+  padding: 11px 0 12px 20px;
+  border: 1px solid #e7e7e7;
+  flex-grow: 1;
+}
+
+.selection__service {
+  width: 568px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 25px 28px;
+}
+
+.selection__about-radio {
+  width: 40px;
+  height: 40px;
+  flex-grow: 0;
+}
+
+.selection__contacts-title {
+  margin-bottom: 76px;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000;
+  font-weight: 500;
+}
+
+.selection__contacts-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 77px;
+}
+
+.selection__contacts-label {
+  width: 100%;
+  display: flex;
+
+  &:first-child {
+    margin-right: 78px;
+  }
+}
+
+.selection__contacts-input {
+  margin-left: 20px;
+  flex-grow: 1;
+  padding: 11px 0 10px 18px;
+  border: 1px solid #cdcdcd;
+}
+
+.selection__comments-title {
+  margin-bottom: 76px;
+  font-size: 36px;
+  font-weight: 500;
+  color: #000;
+}
+
+.selection__comments-textarea {
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  margin-bottom: 67px;
+
+  &::placeholder {
+    padding-top: 10px;
+    padding-left: 19px;
+    font-size: 20px;
+    color: #444444;
+  }
+}
+
+.selection__extra-title {
+  margin-bottom: 57px;
+  font-size: 36px;
+  font-weight: 500;
+  color: #000;
+}
+
+.selection__extra-wrapper {
+  display: flex;
+  margin-bottom: 66px;
+}
+
+.selection__extra-label {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+}
+
+.selection__btn-wrapper {
+  display: flex;
+}
+
+.selection__btn {
+  width: 562px;
+  height: 52px;
+  background-color: #68b738;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}

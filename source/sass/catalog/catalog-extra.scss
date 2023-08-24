@@ -1,0 +1,52 @@
+.catalog__extra-goods {
+  margin-bottom: 86px;
+}
+
+.catalog__extra-title {
+  margin-bottom: 81px;
+}
+
+.catalog__extra-wrapper {
+  display: flex;
+}
+
+.catalog__extra-list {
+  width: 896px;
+}
+
+.catalog__extra-item {
+  display: grid;
+  grid-template-columns: 180px 150px 50px 244px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #cdcdcd;
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.catalog__extra-item-btn {
+  background-color: #68b738;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+}
+
+.catalog__extra-gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  padding: 55px 40px 42px 40px;
+  width: 245px;
+  background-image: url(../../img/pictures/catalog/extra.png);
+  background-repeat: no-repeat;
+}
+
+.catalog__extra-gift-text {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #fff;
+}

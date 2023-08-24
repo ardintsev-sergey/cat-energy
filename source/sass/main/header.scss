@@ -1,0 +1,32 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 100px;
+}
+
+.page-header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__list {
+  display: flex;
+
+  a {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.main-nav__item:not(:last-child) {
+  margin-right: 35px;
+}

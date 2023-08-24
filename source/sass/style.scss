@@ -1,1 +1,16 @@
 // Начните писать стили здесь
+@import "fonts.scss";
+@import "global.scss";
+
+@import "main/header.scss";
+@import "main/banner.scss";
+@import "main/services.scss";
+@import "main/works.scss";
+@import "main/example.scss";
+@import "main/location.scss";
+@import "main/footer.scss";
+
+@import "catalog/catalog-goods.scss";
+@import "catalog/catalog-extra.scss";
+
+@import "selection.scss";
