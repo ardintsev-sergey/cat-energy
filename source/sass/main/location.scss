@@ -1,34 +1,52 @@
 .location {
-  min-height: 400px;
-  padding-top: 95px;
-  padding-bottom: 107px;
-  background-image: url(../img/pictures/Map.png);
+  position: relative;
+  min-height: 474px;
+  padding-left: 0;
+  padding-right: 0;
+  // padding-top: 95px;
+  // padding-bottom: 107px;
+  // background-image: url(../img/pictures/Map.png);
+}
+
+.location__map {
+  position: absolute;
+  top: 112px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: no-repeat 100%/100% url(../img/pictures/location-mobile.png);
+
+  z-index: -1;
 }
 
 .location__data {
-  width: 565px;
+  // width: 565px;
   display: flex;
-  padding: 56px 80px;
-  background-color: #fff;
+  justify-content: space-between;
+  padding: 26px 20px;
+  background-color: $white;
+  z-index: 1;
 }
 
 .location__invite {
-  width: 165px;
-  margin-right: 65px;
-  font-size: 20px;
-  line-height: 26px;
-  color: #111;
+  @include zero-margin;
+  width: 135px;
+  // margin-right: 65px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $special_black;
   text-transform: uppercase;
 }
 
 .location__address {
-  width: 155px;
+  width: 140px;
+  font-size: 14px;
   line-height: 20px;
-  color: #444;
+  color: $special_dark-grey;
   font-style: normal;
 
   p {
-    margin: 0;
-    margin-top: 19px;
+    @include zero-margin;
+    // margin-top: 19px;
   }
 }

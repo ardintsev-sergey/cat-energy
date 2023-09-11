@@ -1,85 +1,71 @@
+.works {
+  margin-bottom: 50px;
+}
+
 .works__title {
-  font-size: 60px;
-  color: #000;
-  margin-bottom: 32px;
-  line-height: 60px;
 }
 
 .works__list {
+  @include zero-list;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    // flex-direction: row;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    // flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .works__item {
-  width: 250px;
-  padding: 151px 0 57px 0;
-  position: relative;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding-top: 40px;
 
-  &--1::before {
-    position: absolute;
-    left: 0;
-    top: 40px;
-    content: url('../img/images/works1.svg');
+  &:not(:last-child) {
+    margin-bottom: 20px;
   }
 
-  &--1::after {
-    position: absolute;
-    right: -30px;
-    top: 125px;
-    content: '1';
+  @media (min-width: $tablet-width) {
+    width: 250px;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 80px 1fr;
+  }
+}
+
+.works__number {
+  display: none;
+  @include zero-margin;
+  z-index: -1;
+
+  @media (min-width: $tablet-width) {
+    display: block;
     font-size: 280px;
-    color: #F2F2F2;
-    z-index: -1;
+    line-height: 280px;
+    color: $basic_grey;
+    grid-row: 1 / -1;
+    grid-column: 2 / -1;
   }
+}
 
-  &--2::before {
-    position: absolute;
-    left: 0;
-    top: 40px;
-    content: url('../img/images/works2.svg');
-  }
+.works__item-descr {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $special_dark-grey;
 
-  &--2::after {
-    position: absolute;
-    right: -30px;
-    top: 125px;
-    content: '2';
-    font-size: 280px;
-    color: #F2F2F2;
-    z-index: -1;
-  }
-
-  &--3::before {
-    position: absolute;
-    left: 0;
-    top: 40px;
-    content: url('../img/images/works3.svg');
-  }
-
-  &--3::after {
-    position: absolute;
-    right: -30px;
-    top: 125px;
-    content: '3';
-    font-size: 280px;
-    color: #F2F2F2;
-    z-index: -1;
-  }
-
-  &--4::before {
-    position: absolute;
-    left: 0;
-    top: 40px;
-    content: url('../img/images/works4.svg');
-  }
-
-  &--4::after {
-    position: absolute;
-    right: -30px;
-    top: 125px;
-    content: '4';
-    font-size: 280px;
-    color: #F2F2F2;
-    z-index: -1;
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
   }
 }

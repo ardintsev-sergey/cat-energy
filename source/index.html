@@ -2,22 +2,22 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>Cat Energy</title>
   </head>
   <body class="page__body">
     <header class="page-header container">
-      <div class="page-header__logo">
-        <a class="page-header__logo-link" href="index.html" style="margin-right: 25px;">
-          <img class="logo-image" src="img/images/logo-mobile.svg" alt="Cat Energy logo">
-        </a>
-        <a class="page-header__logo-link" href="index.html">
-          <img class="logo-image2" src="img/images/logo-2.svg" alt="Cat Energy">
-        </a>
-      </div>
+      <a class="page-header__logo-link" href="index.html" style="margin-right: 25px;">
+        <img class="logo-image" src="img/images/logo-mobile.svg" alt="Cat Energy logo">
+      </a>
+      <a class="page-header__logo-link" href="index.html">
+        <img class="logo-image2" src="img/images/logo-2.svg" alt="Cat Energy">
+      </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__burger" type="button">
           <span class="visually-hidden">Открыть меню</span>
+          <img src="img/images/burger.svg" alt="Меню бургер">
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -39,10 +39,12 @@
           <div class="banner__text">
             <h1 class="banner__title">Функциональное питание для котов</h1>
             <p class="banner__descr">Занялся собой? Займись котом!</p>
-            <a class="banner__link">подобрать программу</a>
+            <img class="banner__img" src="img/pictures/banner-mobile.png" alt="">
+            <!-- <div class="banner__shadow"></div> -->
           </div>
         </div>
         <img class="banner__product" src="img/pictures/product1.png" alt="">
+        <a class="banner__link">подобрать программу</a>
       </section>
 
       <section class="services container">
@@ -53,6 +55,7 @@
             <p class="services__descr">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
+            <hr class="services__item-line">
             <a class="services__link" href="#">каталог slim</a>
           </li>
           <li class="services__item">
@@ -60,29 +63,38 @@
             <p class="services__descr">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
+            <hr class="services__item-line">
             <a class="services__link" href="#">каталог pro</a>
           </li>
         </ol>
       </section>
 
       <section class="works container">
-        <h2 class="works__title">Как это работает</h2>
+        <h2 class="works__title title">Как это работает</h2>
         <ol class="works__list">
           <li class="works__item works__item--1">
+            <img src="../img/images/works1.svg" alt="">
+            <p class="works__number">1</p>
             <p class="works__item-descr">
               Функциональное питание содержит только полезные питательные вещества.
             </p>
           </li>
           <li class="works__item works__item--2">
+            <img src="../img/images/works2.svg" alt="">
+            <p class="works__number">2</p>
             <p class="works__item-descr">
               Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
             </p>
           </li>
           <li class="works__item works__item--3">
+            <img src="../img/images/works3.svg" alt="">
+            <p class="works__number">3</p>
             <p class="works__item-descr">
             Замените один-два приема обычной еды на наше функциональное питание.
           </p></li>
           <li class="works__item works__item--4">
+            <img src="../img/images/works4.svg" alt="">
+            <p class="works__number">4</p>
             <p class="works__item-descr">
             Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
           </p></li>
@@ -90,37 +102,43 @@
       </section>
 
       <section class="example container">
-        <h2 class="example__title">Живой пример</h2>
-        <div class="example__wrapper">
-          <div class="example__content">
-            <p class="example__descr">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-            </p>
-            <ul class="example__list">
-              <li class="example__item">
-                <p class="example__number">5 КГ</p>
-                <p class="example__value">снижение веса</p>
-              </li>
-              <li class="example__item">
-                <p class="example__number">60 ДНЕЙ</p>
-                <p class="example__value example__value--time">затрачено времени</p>
-              </li>
-            </ul>
-            <p class="example__cost">Затраты на питание: <span>15 000 РУБ.</span> </p>
-          </div>
-          <div class="example__swiper">
-            <ul>
-              <li>
-                <img src="img/pictures/before-mobile1.png" alt="Было">
-              </li>
-              <li>
-                <img src="img/pictures/after-mobile1.png" alt="Стало">
-              </li>
-            </ul>
-            <button>было</button>
-            <span></span>
-            <button>стало</button>
-          </div>
+        <div class="example__container-wrapper">
+          <h2 class="example__title title">Живой пример</h2>
+          <div class="example__wrapper">
+            <div class="example__content">
+              <p class="example__descr">
+                Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+              </p>
+              <ul class="example__list">
+                <li class="example__item">
+                  <p class="example__number">5 КГ</p>
+                  <p class="example__value">снижение веса</p>
+                </li>
+                <li class="example__item">
+                  <p class="example__number">60 ДНЕЙ</p>
+                  <p class="example__value example__value--time">затрачено времени</p>
+                </li>
+              </ul>
+              <p class="example__cost">Затраты на питание: <span>15 000 РУБ.</span> </p>
+            </div>
+            <div class="example__swiper">
+              <div class="example__swiper-wrapper">
+                <ul class="example__swiper-list">
+                  <li>
+                    <img src="img/pictures/before-mobile1.png" alt="Было">
+                  </li>
+                  <!-- <li>
+                    <img src="img/pictures/after-mobile1.png" alt="Стало">
+                  </li> -->
+                </ul>
+              </div>
+              <div class="example__buttons">
+                <button class="example__btn">было</button>
+                <span></span>
+                <button class="example__btn">стало</button>
+              </div>
+            </div>
+        </div>
         </div>
 
       </section>
@@ -138,9 +156,10 @@
     </main>
 
     <footer class="footer container">
-      <a href="index.html">
-        <img class="footer__logo logo" src="img/images/logo-2.svg" alt="">
+      <a class="footer__logo" href="index.html">
+        <img class="footer__logo-img logo" src="img/images/logo-2.svg" alt="">
       </a>
+      <hr class="footer__line">
       <ul class="footer__socials">
         <li class="footer__social-item">
           <a class="footer__social-link footer__social-link--vk">
@@ -158,6 +177,7 @@
           </a>
         </li>
       </ul>
+      <hr class="footer__line">
       <div class="footer__copyright">
         <a href="">
           HTML Academy

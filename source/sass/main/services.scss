@@ -1,46 +1,96 @@
 .services {
-  margin-bottom: 71px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 71px;
+  }
 }
 
 .services__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include zero-list;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .services__item {
-  width: 46%;
-  padding: 55px 52px;
-  background-color: #f2f2f2;
+  width: 100%;
+  padding: 30px 30px 18px 20px;
+  background-color: $basic_grey;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 46%;
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
 }
 
 .services__item-title {
+  @include zero-margin;
   position: relative;
-  margin-bottom: 73px;
-  padding-left: 162px;
-  font-size: 36px;
-  color: #000;
+  margin-bottom: 29px;
+  padding-left: 71px;
+  font-size: 24px;
+  font-weight: 400;
+  color: $black;
   text-transform: uppercase;
 
   &--lighting::before {
     position: absolute;
     top: -40px;
     left: 0;
-    content: url(../img/images/lighting.svg);
+    width: 50px;
+    height: 53px;
+    background-size: cover;
+    background-image: url(../img/images/lighting.svg);
+    content: "";
   }
 
   &--mass::before {
     position: absolute;
     top: -40px;
     left: 0;
-    content: url(../img/images/mass.svg);
+    width: 67px;
+    height: 50px;
+    background-size: cover;
+    background-image: url(../img/images/mass.svg);
+    content: "";
   }
 }
 
+.services__descr {
+  @include zero-margin;
+  margin-bottom: 23px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $special_dark-grey;
+}
+
+.services__item-line {
+  margin-bottom: 15px;
+  background-color: 1px solid #d9d9d9;
+}
+
 .services__link {
-  font-size: 20px;
-  color: #000;
+  position: relative;
+  font-size: 16px;
+  color: $black;
   text-decoration: none;
+
+  &::after {
+    position: absolute;
+    content: url(../../img/images/arrow.svg);
+    left: 82px;
+    top: 2px;
+  }
 }

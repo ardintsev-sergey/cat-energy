@@ -4,8 +4,18 @@
 
 .container {
   margin: 0 auto;
-  padding-left: 110px;
-  padding-right: 110px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 html {
@@ -19,6 +29,7 @@ body {
   font-size: 16px;
   min-height: 100%;
   line-height: 24px;
+  font-weight: 400;
   color: #444444;
   // min-width: 1160px;
   // margin: 0 auto;
@@ -29,12 +40,12 @@ body {
   flex-grow: 1;
 }
 
-ul,
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+// ul,
+// ol {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }
 
 img {
   margin: 0;
@@ -51,4 +62,18 @@ img {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.title {
+  @include zero-margin;
+  font-size: 36px;
+  color: $black;
+  margin-bottom: 40px;
+  line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    margin-bottom: 32px;
+    line-height: 60px;
+  }
 }

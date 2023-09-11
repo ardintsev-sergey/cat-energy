@@ -2,22 +2,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
   width: 100%;
   top: 100px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+  }
 }
 
 .page-header__logo {
+  width: 65%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.main-nav__toggle {
-  display: none;
+.main-nav__burger {
+  @include zero-btn;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__list {
-  display: flex;
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 
   a {
     font-size: 20px;
