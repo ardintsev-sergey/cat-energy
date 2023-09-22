@@ -7,19 +7,18 @@
   </head>
   <body class="page__body">
     <header class="page-header container catalog__header">
-      <div class="page-header__logo">
-        <a class="page-header__logo-link" href="index.html" style="margin-right: 25px;">
-          <img class="logo-image" src="img/images/logo-mobile.svg" alt="Cat Energy logo">
-        </a>
-        <a class="page-header__logo-link" href="index.html">
-          <img class="logo-image2" src="img/images/logo-2.svg" alt="Cat Energy">
-        </a>
-      </div>
+      <a class="page-header__logo-link" href="index.html">
+        <img class="logo-image" src="img/images/logo-mobile.svg" alt="Cat Energy logo">
+      </a>
+      <a class="page-header__logo-link" href="index.html">
+        <img class="logo-image2" src="img/images/logo-2.svg" alt="Cat Energy">
+      </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__burger" type="button">
           <span class="visually-hidden">Открыть меню</span>
+          <img src="img/images/burger.svg" alt="Меню бургер">
         </button>
-        <ul class="main-nav__list catalog__nav-list">
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="index.html">главная</a>
           </li>
@@ -42,14 +41,17 @@
             <form class="selection__form" action="">
               <div class="selection__about-service">
                 <fieldset class="selection__about-cat">
-                    <label class="selection__about-label" for="cat-name">ИМЯ:*
-                        <input class="selection__about-input" id="cat-name" type="text" placeholder="БАРСИК">
+                    <label class="selection__about-label" for="cat-name">
+                      <span>ИМЯ:*</span>
+                      <input class="selection__about-input" id="cat-name" type="text" placeholder="БАРСИК">
                     </label>
-                    <label class="selection__about-label" for="cat-weight">Вес (кг):*
-                        <input class="selection__about-input" id="cat-weight" type="number" placeholder="7">
+                    <label class="selection__about-label" for="cat-weight">
+                      <span>Вес (кг):*</span>
+                      <input class="selection__about-input" id="cat-weight" type="number" placeholder="7">
                     </label>
-                    <label class="selection__about-label" for="cat-age">Возраст (лет):
-                        <input class="selection__about-input" id="cat-age" type="number" placeholder="7">
+                    <label class="selection__about-label" for="cat-age">
+                      <span>Возраст (лет):</span>
+                      <input class="selection__about-input" id="cat-age" type="number" placeholder="7">
                     </label>
                 </fieldset>
                 <fieldset class="selection__service">

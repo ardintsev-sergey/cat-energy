@@ -16,6 +16,10 @@
 .footer__logo {
   margin-bottom: 32px;
 
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
   &-img {
     width: 128px;
     height: 24px;
@@ -74,8 +78,24 @@
   margin-top: 22px;
   font-size: 14px;
 
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    justify-content: end;
+    width: auto;
+  }
+
   a {
     text-decoration: none;
     color: $special_dark-grey;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      justify-content: end;
+      width: auto;
+
+      :not(:last-child) {
+        margin-right: 22px;
+      }
+    }
   }
 }
