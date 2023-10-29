@@ -5,6 +5,14 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 
+// const gulp = require("gulp");
+// const plumber = require("gulp-plumber");
+// const sourcemap = require("gulp-sourcemaps");
+// const sass = require("gulp-sass");
+// const postcss = require("gulp-postcss");
+// const autoprefixer = require("autoprefixer");
+// const sync = require("browser-sync").create();
+
 // Styles
 
 export const styles = () => {
@@ -25,7 +33,7 @@ const server = (done) => {
     server: {
       baseDir: 'source'
     },
-    cors: true,
+    // cors: true,
     notify: false,
     ui: false,
   });

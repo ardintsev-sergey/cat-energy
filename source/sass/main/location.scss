@@ -3,9 +3,6 @@
   min-height: 474px;
   padding-left: 0;
   padding-right: 0;
-  // padding-top: 95px;
-  // padding-bottom: 107px;
-  // background-image: url(../img/pictures/Map.png);
 }
 
 .location__map {
@@ -26,16 +23,24 @@
   padding: 26px 20px;
   background-color: $basic_grey;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 70px 56px;
+  }
 }
 
 .location__invite {
   @include zero-margin;
   width: 135px;
-  // margin-right: 65px;
   font-size: 16px;
   line-height: 20px;
   color: $special_black;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .location__address {
@@ -45,8 +50,16 @@
   color: $special_dark-grey;
   font-style: normal;
 
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
   p {
     @include zero-margin;
-    // margin-top: 19px;
+    @media (min-width: $tablet-width) {
+      margin-top: 10px;
+    }
   }
 }

@@ -8,11 +8,9 @@
   </head>
   <body class="page__body">
     <header class="page-header container">
-      <a class="page-header__logo-link" href="index.html">
-        <img class="logo-image" src="img/images/logo-mobile.svg" alt="Cat Energy logo">
-      </a>
-      <a class="page-header__cat-link" href="index.html">
-        <img class="logo-image2" src="img/images/logo-2.svg" alt="Cat Energy">
+      <a class="page-header__logo-link logo" href="index.html">
+        <img class="page-header__logo-image" src="./img/images/logo-mobile.svg" width="34" height="38" alt="Cat Energy">
+        <img class="logo__sign" src="./img/images/logo-2.svg" width="101" height="19" alt="" aria-hidden="true">
       </a>
       <nav class="main-nav">
         <button class="main-nav__burger" type="button">
@@ -34,17 +32,15 @@
     </header>
 
     <main class="main">
-      <section class="banner container">
-        <div class="banner__wrapper">
+      <section class="banner ">
+        <div class="banner__wrapper container">
           <div class="banner__text">
             <h1 class="banner__title">Функциональное питание для котов</h1>
             <p class="banner__descr">Занялся собой? Займись котом!</p>
-            <img class="banner__img" src="img/pictures/banner-mobile.png" alt="">
-            <!-- <div class="banner__shadow"></div> -->
           </div>
+          <img class="banner__product" src="img/pictures/product1.png" alt="">
+          <a class="banner__link">подобрать программу</a>
         </div>
-        <img class="banner__product" src="img/pictures/product1.png" alt="">
-        <a class="banner__link">подобрать программу</a>
       </section>
 
       <section class="services container">
@@ -109,33 +105,36 @@
               <p class="example__descr">
                 Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
               </p>
-              <ul class="example__list">
-                <li class="example__item">
-                  <p class="example__number">5 КГ</p>
-                  <p class="example__value">снижение веса</p>
-                </li>
-                <li class="example__item">
-                  <p class="example__number">60 ДНЕЙ</p>
-                  <p class="example__value example__value--time">затрачено времени</p>
-                </li>
-              </ul>
-              <p class="example__cost">Затраты на питание: <span>15 000 РУБ.</span> </p>
+              <div class="example__list-wrapper">
+                <ul class="example__list">
+                  <li class="example__item">
+                    <p class="example__number">5 КГ</p>
+                    <p class="example__value">снижение веса</p>
+                  </li>
+                  <li class="example__item">
+                    <p class="example__number">60 ДНЕЙ</p>
+                    <p class="example__value example__value--time">затрачено времени</p>
+                  </li>
+                </ul>
+                <p class="example__cost">Затраты на питание: <span>15&nbsp;000&nbsp;руб.</span> </p>
+              </div>
             </div>
             <div class="example__swiper">
               <div class="example__swiper-wrapper">
                 <ul class="example__swiper-list">
-                  <li>
-                    <img src="img/pictures/before-mobile1.png" alt="Было">
+                  <li class="example__swiper-item">
+                    <img class="example__swiper-img" src="img/pictures/before-mobile1.png" alt="Было">
                   </li>
-                  <!-- <li>
-                    <img src="img/pictures/after-mobile1.png" alt="Стало">
+                  <!-- <li class="example__swiper-item">
+                    <img class="example__swiper-img" src="img/pictures/after-mobile1.png" alt="Стало">
                   </li> -->
                 </ul>
               </div>
-              <div class="example__buttons">
-                <button class="example__btn">было</button>
-                <span></span>
-                <button class="example__btn">стало</button>
+              <div class="example__switcher">
+                <button class="example__switcher-btn" type="button">Было</button>
+                <div class="example__switcher-toggler"></div>
+                <input class="example__switcher-bar" type="range" value="50" min="17" max="83">
+                <button class="example__switcher-btn" type="button">Стало</button>
               </div>
             </div>
         </div>
@@ -147,7 +146,7 @@
         <div class="location__data">
           <b class="location__invite">приглашаем к сотрудничеству дилеров!</b>
           <address class="location__address">ул. Большая
-            Конюшенная, д. 19/8
+            Конюшенная, д. 19/8<br>
             <p>Санкт-Петербург</p>
           </address>
         </div>
@@ -178,14 +177,21 @@
         </li>
       </ul>
       <hr class="footer__line">
-      <div class="footer__copyright">
+      <!-- <div class="footer__copyright">
         <a href="">
           HTML Academy
         </a>
         <a href="">
           <img src="img/images/htmlacademy.svg" alt="htmlacademy">
         </a>
-      </div>
+      </div> -->
+      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">Разработано в</span>
+        HTML Academy
+        <svg class="developer__image" width="27" height="34" viewBox="0 0 27 34">
+          <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="currentColor"/>
+        </svg>
+      </a>
     </footer>
   </body>
 </html>

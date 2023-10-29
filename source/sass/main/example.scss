@@ -1,10 +1,10 @@
 .example {
-  // padding-left: 0;
-  // padding-right: 0;
-  // padding-top: 25px;
-  // padding-bottom: 40px;
   padding: 25px 0 40px 0;
   background-color: $basic_grey;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to top, #ebebeb 462px, #ffffff 462px);
+  }
 }
 
 .example__container-wrapper {
@@ -16,6 +16,10 @@
   @include zero-margin;
   font-family: Arial, sans-serif;
   margin-bottom: 69px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .example__list {
@@ -25,8 +29,21 @@
   margin-bottom: 60px;
 }
 
+.example__list-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .example__item {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-child) {
+      margin-right: 42px;
+    }
+  }
 }
 
 .example__number {
@@ -42,9 +59,11 @@
   line-height: 24px;
   color: $black;
 
-  // &:not(:last-child) {
-  //   margin-right: 42px;
-  // }
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    height: 77px;
+    font-size: 30px;
+  }
 }
 
 .example__value {
@@ -60,8 +79,20 @@
   background-color: #f2f2f2;
   color: $special_dark-grey;
 
+  @media (min-width: $tablet-width) {
+    width: 138px;
+    top: 56px;
+    left: 11px;
+    font-size: 14px;
+    background-color: $white;
+  }
+
   &--time {
     left: 23px;
+
+    @media (min-width: $tablet-width) {
+      left: 11px;
+    }
   }
 }
 
@@ -69,10 +100,16 @@
   font-size: 14px;
   color: $black;
   text-align: center;
+  text-transform: uppercase;
 
-  // span {
-  //   padding-left: 63px;
-  // }
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    text-align: right;
+
+    span {
+      display: block;
+    }
+  }
 }
 
 .example__swiper {
@@ -81,6 +118,10 @@
 
 .example__swiper-wrapper {
   height: 280px;
+
+  @media (min-width: $tablet-width) {
+    height: 511px;
+  }
 }
 
 .example__swiper-list {
@@ -90,15 +131,25 @@
   right: 0;
 }
 
-.example__buttons {
+.example__switcher {
   display: flex;
   justify-content: center;
   // margin: 0 auto;
 }
 
-.example__btn {
+.example__switcher-btn {
   @include zero-btn;
-
+  padding: 0 2px 2px;
   font-size: 16px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.example__swiper-img {
+  @media (min-width: $tablet-width) {
+    min-height: 511px;
+  }
 }

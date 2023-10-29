@@ -1,24 +1,70 @@
 .banner {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 20px;
-  z-index: 0;
-  color: $white;
+  padding-top: 27px;
+  text-align: center;
 
-  &.container {
-    padding-left: 0;
-    padding-right: 0;
+  @media (max-width: 767px) {
+    color: $white;
+    background-color: $basic_green;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-image: url("../../img/pictures/banner-mobile.jpg"),
+      linear-gradient($basic_green 0, $basic_green 302px, $white 302px);
+  }
+
+  @media (min-width: $tablet-width) {
+    color: $black;
+    background-color: transparent;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    margin-bottom: 82px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -200px;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      z-index: -2;
+
+      background-color: $basic_green;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-image: url("../../img/pictures/banner.jpg");
+    }
+  }
+}
+
+.banner .container {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding: 0 30px 526px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 582px;
+    padding: 20px 610px 95px 80px;
   }
 }
 
 .banner__wrapper {
-  position: relative;
+  // position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 27px 30px 0 30px;
-  text-align: center;
+  min-height: 582px;
+  // padding: 27px 30px 0 30px;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    justify-content: start;
+    align-items: start;
+    // padding: 62px 30px 0 87px;
+  }
 }
 
 .banner__img {
@@ -36,6 +82,11 @@
 
 .banner__text {
   max-width: 250px;
+
+  @media (min-width: 768px) {
+    justify-content: start;
+    padding-left: 87px;
+  }
 }
 
 .banner__title {
@@ -45,6 +96,14 @@
   font-weight: 400;
   letter-spacing: -2px;
   line-height: 36px;
+
+  @media (min-width: 768px) {
+    width: 414px;
+    margin-bottom: 41px;
+    color: $black;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .banner__descr {
@@ -52,20 +111,44 @@
   margin-bottom: 52px;
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .banner__link {
   display: block;
   width: calc(100% - 40px);
+  max-width: 380px;
   padding: 14px 0;
   background-color: $basic_green;
   text-transform: uppercase;
   font-size: 20px;
   color: $white;
+  justify-self: center;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 244px;
+    margin-left: 87px;
+  }
 }
 
 .banner__product {
-  // width: 552px;
-  // height: 499px;
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    z-index: -1;
+    width: 708px;
+    height: 609px;
+  }
+  @media (min-width: $desktop-width) {
+    top: 30px;
+    left: calc(50% - 162px);
+    width: 552px;
+    height: 499px;
+  }
 }

@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -26,7 +26,7 @@
     margin-bottom: 20px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     width: 46%;
     &:not(:last-child) {
       margin-bottom: 0px;
@@ -38,32 +38,53 @@
   @include zero-margin;
   position: relative;
   margin-bottom: 29px;
-  padding-left: 71px;
+  padding-left: 75px;
   font-size: 24px;
   font-weight: 400;
   color: $black;
   text-transform: uppercase;
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding-left: 0;
+    font-size: 36px;
+  }
+
   &--lighting::before {
     position: absolute;
-    top: -40px;
+    top: -15px;
     left: 0;
     width: 50px;
     height: 53px;
     background-size: cover;
     background-image: url(../img/images/lighting.svg);
     content: "";
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      width: 200px;
+      height: 201px;
+      right: 62px;
+      top: 2px;
+      left: auto;
+    }
   }
 
   &--mass::before {
     position: absolute;
-    top: -40px;
+    top: -10px;
     left: 0;
     width: 67px;
     height: 50px;
     background-size: cover;
     background-image: url(../img/images/mass.svg);
     content: "";
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      width: 268px;
+      height: 200px;
+      right: 62px;
+      top: 2px;
+      left: auto;
+    }
   }
 }
 
@@ -74,11 +95,22 @@
   font-size: 14px;
   line-height: 18px;
   color: $special_dark-grey;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 48%;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 52px;
+  }
 }
 
 .services__item-line {
   margin-bottom: 15px;
   background-color: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .services__link {
@@ -87,10 +119,18 @@
   color: $black;
   text-decoration: none;
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    font-size: 20px;
+  }
+
   &::after {
     position: absolute;
     content: url(../../img/images/arrow.svg);
     left: 82px;
     top: 2px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      left: 100px;
+    }
   }
 }
