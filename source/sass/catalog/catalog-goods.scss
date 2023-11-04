@@ -1,7 +1,16 @@
 .catalog__header {
   position: static;
-  padding-top: 54px;
-  margin-bottom: 74px;
+  margin-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 54px;
+  }
 }
 
 .catalog__nav-list {
@@ -17,11 +26,14 @@
 .catalog__title {
   @include zero-margin;
   text-align: center;
-  margin-bottom: 84px;
+  padding: 27px 20px 42px;
+  // margin-bottom: 84px;
   font-size: 36px;
   line-height: 36px;
   color: $black;
   font-weight: 400;
+  border-top: 1px solid #d9d9d9;
+  // border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: 768px) {
     margin-bottom: 84px;
@@ -33,72 +45,136 @@
   @include zero-list;
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: center;
 
-  @media (min-width: 640px) {
+  @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 324px);
     column-gap: 60px;
     row-gap: 60px;
   }
 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 245px);
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     row-gap: 63px;
   }
 }
 
 .catalog__item {
-  display: flex;
-  align-items: flex-end;
-  height: 511px;
+  padding-top: 11px;
+  padding-bottom: 13px;
+  display: grid;
+  align-items: center;
+  // height: 165px;
   position: relative;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 13px;
+  border-top: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    // height: 511px;
+    align-items: flex-end;
+    padding-bottom: 39px;
+    grid-template-columns: 1fr;
+    row-gap: 33px;
+    background-image: linear-gradient(to top, #f2f2f2 511px, #ffffff 511px);
+    border-top: 1px solid $white;
+  }
+
+  &--more {
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: $white;
+    background-image: none;
+  }
 }
 
 .catalog__item-wrapper {
   width: 100%;
-  height: 431px;
+  height: 165px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 40px;
-  padding-left: 35px;
-  padding-right: 30px;
-  background-color: $basic_grey;
-  border: 2px solid transparent;
+  padding-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 73px;
+    background-color: $basic_grey;
+    height: 431px;
+    // padding-bottom: 40px;
+    padding-left: 35px;
+    padding-right: 30px;
+    border: 2px solid transparent;
+  }
 
   hr {
-    background-color: $special_grey;
-    height: 1px;
+    display: none;
+    @media (min-width: $tablet-width) {
+      display: block;
+      background-color: $special_grey;
+      height: 1px;
+    }
   }
 
   &--more {
     background-color: $white;
     border: 2px solid $basic_grey;
+
+    .catalog__item-title,
+    .catalog__item-option {
+      width: auto;
+      text-align: center;
+    }
   }
 }
 
 .catalog__item-img-wrapper {
   display: flex;
-  align-items: flex-end;
+  // align-items: flex-end;
   justify-content: center;
-  width: 172px;
-  height: 196px;
-  position: absolute;
+  // width: 84px;
+  height: 100px;
+  // position: absolute;
   top: 0;
   left: 35px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    left: 72px;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 172px;
+    height: 196px;
+
+    img {
+      align-self: flex-end;
+    }
+  }
 }
 
-.catalog__item-info {
-  margin-bottom: 33px;
-}
+// .catalog__item-info {
+//   @media (min-width: $tablet-width) {
+//     margin-bottom: 33px;
+//   }
+// }
 
 .catalog__item-title {
   margin: 0;
-  margin-bottom: 22px;
-  font-size: 20px;
+  margin-bottom: 14px;
+  width: 80px;
+  font-size: 16px;
   font-weight: 500;
   color: #222222;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin-bottom: 22px;
+    width: 145px;
+    text-align: center;
+  }
 }
 
 .catalog__item-option {
@@ -106,13 +182,32 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
+  font-size: 12px;
+  width: 141px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin-bottom: 22px;
+    width: auto;
+  }
 }
 
 .catalog__item-btn {
+  @include zero-btn;
   padding: 10px 53px;
+  width: 100%;
   border: none;
   background-color: $basic_green;
   color: $white;
+  font-size: 16px;
+  text-transform: uppercase;
+  grid-column: 1/-1;
+  margin: auto;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    width: auto;
+  }
 
   &--more {
     padding: 10px 39px;

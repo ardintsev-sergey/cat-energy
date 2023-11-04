@@ -9,33 +9,52 @@
 .catalog__extra-wrapper {
   display: block;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     display: flex;
   }
 }
 
 .catalog__extra-list {
-  width: 896px;
+  @include zero-list;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    // width: 896px;
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 896px;
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
 }
 
 .catalog__extra-item {
   display: grid;
+  row-gap: 13px;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  border-top: 1px solid #cdcdcd;
+  align-items: center;
+  padding: 13px 0;
 
-  @media (min-width: 640px) {
+  @media (min-width: $tablet-width) {
     grid-template-columns: 180px 150px 60px;
-    column-gap: 60px;
-    row-gap: 60px;
+    // column-gap: 60px;
+    row-gap: 25px;
+    padding: 26px 38px;
+    border: 1px solid #cdcdcd;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     grid-template-columns: 180px 150px 50px 244px;
     // column-gap: 80px;
     // row-gap: 63px;
     grid-template-columns: 180px 150px 50px 244px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-top: 1px solid #cdcdcd;
+    padding: 15px 0 17px 0;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
   }
 
   &:last-child {
@@ -44,22 +63,35 @@
 }
 
 .catalog__extra-item-title {
+  @include zero-margin;
   grid-column: 1 / -1;
-  @media (min-width: 1024px) {
+  font-size: 16px;
+  text-transform: uppercase;
+  @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
+    font-size: 20px;
   }
 }
 
+.catalog__extra-item-quantity {
+  @include zero-margin;
+}
+
 .catalog__extra-item-price {
+  @include zero-margin;
   justify-self: end;
 }
 
 .catalog__extra-item-btn {
+  @include zero-btn;
   grid-column: 1 / -1;
+  width: 100%;
   background-color: #68b738;
   color: #fff;
   font-weight: 500;
-  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 11px 0;
 
   @media (min-width: 1024px) {
     grid-column: -2 / -1;
@@ -71,10 +103,17 @@
   flex-direction: column;
   align-items: center;
   // justify-content: center;
+  margin: auto;
   padding: 55px 40px 42px 40px;
-  width: 245px;
+  min-width: 280px;
   background-image: url(../../img/pictures/catalog/extra.png);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .catalog__extra-gift-text {

@@ -7,7 +7,7 @@
     <title>Cat Energy</title>
   </head>
   <body class="page__body">
-    <header class="page-header container catalog__header">
+    <!-- <header class="page-header container catalog__header">
       <a class="page-header__logo-link" href="index.html">
         <img class="logo-image" src="img/images/logo-mobile.svg" alt="Cat Energy logo">
       </a>
@@ -31,7 +31,32 @@
           </li>
         </ul>
       </nav>
+    </header> -->
+
+    <header class="page-header container catalog__header">
+      <a class="page-header__logo-link logo" href="index.html">
+        <img class="page-header__logo-image" src="./img/images/logo-mobile.svg" width="34" height="38" alt="Cat Energy">
+        <img class="logo__sign" src="./img/images/logo-2.svg" width="101" height="19" alt="" aria-hidden="true">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__burger" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <img src="img/images/burger.svg" alt="Меню бургер">
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html">главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html">каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html">подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
+
     <main class="main">
       <section class="catalog__catalog container">
         <h1 class="catalog__title">Каталог продукции</h1>
@@ -52,7 +77,8 @@
                 <p class="catalog__item-option"><span>Цена</span><span>700 Р.</span></p>
                 <hr>
               </div>
-              <button class="catalog__item-btn" type="button">заказать</button>
+            </div>
+            <button class="catalog__item-btn" type="button">заказать</button>
           </li>
           <li class="catalog__item">
             <div class="catalog__item-img-wrapper">
@@ -70,7 +96,8 @@
                 <p class="catalog__item-option"><span>Цена</span><span>1000 Р.</span></p>
                 <hr>
               </div>
-              <button class="catalog__item-btn" type="button">заказать</button>
+            </div>
+            <button class="catalog__item-btn" type="button">заказать</button>
           </li>
           <li class="catalog__item">
             <div class="catalog__item-img-wrapper">
@@ -88,7 +115,8 @@
                 <p class="catalog__item-option"><span>Цена</span><span>700 Р.</span></p>
                 <hr>
               </div>
-              <button class="catalog__item-btn" type="button">заказать</button>
+            </div>
+            <button class="catalog__item-btn" type="button">заказать</button>
           </li>
           <li class="catalog__item">
             <div class="catalog__item-img-wrapper">
@@ -106,7 +134,8 @@
                 <p class="catalog__item-option"><span>Цена</span><span>1000 Р.</span></p>
                 <hr>
               </div>
-              <button class="catalog__item-btn" type="button">заказать</button>
+            </div>
+            <button class="catalog__item-btn" type="button">заказать</button>
           </li>
           <li class="catalog__item">
             <div class="catalog__item-img-wrapper">
@@ -124,7 +153,8 @@
                 <p class="catalog__item-option"><span>Цена</span><span>400 Р.</span></p>
                 <hr>
               </div>
-              <button class="catalog__item-btn" type="button">заказать</button>
+            </div>
+            <button class="catalog__item-btn" type="button">заказать</button>
           </li>
           <li class="catalog__item">
             <div class="catalog__item-img-wrapper">
@@ -142,7 +172,8 @@
                 <p class="catalog__item-option"><span>Цена</span><span>700 Р.</span></p>
                 <hr>
               </div>
-              <button class="catalog__item-btn" type="button">заказать</button>
+            </div>
+            <button class="catalog__item-btn" type="button">заказать</button>
           </li>
           <li class="catalog__item">
             <div class="catalog__item-img-wrapper">
@@ -160,10 +191,11 @@
                 <p class="catalog__item-option"><span>Цена</span><span>500 Р.</span></p>
                 <hr>
               </div>
-              <button class="catalog__item-btn" type="button">заказать</button>
+            </div>
+            <button class="catalog__item-btn" type="button">заказать</button>
           </li>
 
-          <li class="catalog__item">
+          <li class="catalog__item catalog__item--more">
             <div class="catalog__item-img-wrapper">
               <img class="catalog__item-img" src="img/pictures/catalog/plus.svg" alt="Показать еще ">
             </div>
@@ -176,7 +208,8 @@
                   гораздо больше!
                 </p>
               </div>
-              <button class="catalog__item-btn catalog__item-btn--more" type="button">показать все</button>
+            </div>
+            <button class="catalog__item-btn catalog__item-btn--more" type="button">показать все</button>
           </li>
         </ul>
       </section>
@@ -221,7 +254,7 @@
         <div class="location__data">
           <b class="location__invite">приглашаем к сотрудничеству дилеров!</b>
           <address class="location__address">ул. Большая
-            Конюшенная, д. 19/8
+            Конюшенная, д. 19/8<br>
             <p>Санкт-Петербург</p>
           </address>
         </div>
@@ -230,9 +263,10 @@
     </main>
 
     <footer class="footer container">
-      <a href="index.html">
-        <img class="footer__logo logo" src="img/images/logo-2.svg" alt="">
+      <a class="footer__logo" href="index.html">
+        <img class="footer__logo-img logo" src="img/images/logo-2.svg" alt="">
       </a>
+      <hr class="footer__line">
       <ul class="footer__socials">
         <li class="footer__social-item">
           <a class="footer__social-link footer__social-link--vk">
@@ -250,14 +284,14 @@
           </a>
         </li>
       </ul>
-      <div class="footer__copyright">
-        <a href="">
-          HTML Academy
-        </a>
-        <a href="">
-          <img src="img/images/htmlacademy.svg" alt="htmlacademy">
-        </a>
-      </div>
+      <hr class="footer__line">
+      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">Разработано в</span>
+        HTML Academy
+        <svg class="developer__image" width="27" height="34" viewBox="0 0 27 34">
+          <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="currentColor"/>
+        </svg>
+      </a>
     </footer>
   </body>
 </html>
