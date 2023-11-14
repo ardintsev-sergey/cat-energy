@@ -24,9 +24,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 896px;
+    width: 73.35%;
     margin-bottom: 0;
     margin-right: 80px;
+    flex-grow: 1;
   }
 }
 
@@ -93,7 +94,7 @@
   text-transform: uppercase;
   padding: 11px 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     grid-column: -2 / -1;
   }
 }
@@ -106,13 +107,37 @@
   margin: auto;
   padding: 55px 40px 42px 40px;
   min-width: 280px;
-  background-image: url(../../img/pictures/catalog/extra.png);
+  min-height: 290px;
+  background-image: url(../../img/pictures/catalog/extra-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url(../../img/pictures/catalog/extra-mobile@2.jpg);
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0;
+    min-height: 200px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(../../img/pictures/catalog/extra-tablet.jpg);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/pictures/catalog/extra-tablet@2.jpg);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 23.7%;
+    flex-grow: 0;
+    background-image: url(../../img/pictures/catalog/extra-desktop.jpg);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/pictures/catalog/extra-desktop@2.jpg);
+    }
   }
 }
 

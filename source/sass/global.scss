@@ -35,6 +35,10 @@ body {
   color: $special_dark-grey;
 }
 
+.body--locked {
+  overflow: hidden;
+}
+
 .main-container {
   flex-grow: 1;
 }

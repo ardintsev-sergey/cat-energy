@@ -3,9 +3,9 @@
     color: $black;
   }
 
-  // @media (min-width: $tablet-width) {
-  //   .main-nav {
-  //     margin-left: auto;
-  //   }
-  // }
+  @media (min-width: $tablet-width) {
+    .main-nav__item--active::after {
+      background-color: $basic_green;
+    }
+  }
 }

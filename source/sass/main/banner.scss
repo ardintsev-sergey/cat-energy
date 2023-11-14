@@ -7,8 +7,15 @@
     background-color: $basic_green;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-image: url("../../img/pictures/banner-mobile.jpg"),
+    // background-size: auto 302px;
+    background-image: url("../../img/pictures/banner/banner-mobile.jpg"),
       linear-gradient($basic_green 0, $basic_green 302px, $white 302px);
+
+    @media (min-resolution: 2dppx) {
+      background-size: auto 302px, auto;
+      background-image: url("../../img/pictures/banner/banner-mobile@2x.jpg"),
+        linear-gradient($basic_green 0, $basic_green 302px, $white 302px);
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -19,6 +26,7 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
+    padding-top: 0;
     margin-bottom: 82px;
 
     &::after {
@@ -33,7 +41,12 @@
       background-color: $basic_green;
       background-position: 0 100%;
       background-repeat: no-repeat;
-      background-image: url("../../img/pictures/banner.jpg");
+      background-image: url("../../img/pictures/banner/banner.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-size: auto 696px;
+        background-image: url("../img/background/banner@2x.jpg");
+      }
     }
   }
 }

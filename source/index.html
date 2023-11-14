@@ -5,20 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>Cat Energy</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicon/180.png">
+    <link rel="manifest" href="./manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page-header container">
-      <a class="page-header__logo-link logo" href="index.html">
-        <img class="page-header__logo-image" src="./img/images/logo-mobile.svg" width="34" height="38" alt="Cat Energy">
-        <img class="logo__sign" src="./img/images/logo-2.svg" width="101" height="19" alt="" aria-hidden="true">
-      </a>
-      <nav class="main-nav">
+      <div  class="page-header__bar">
+        <a class="page-header__logo-link logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/images/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/images/logo-tablet.svg">
+            <img class="page-header__logo-image" src="./img/images/logo-mobile.svg" width="34" height="38" alt="Cat Energy">
+          </picture>
+        </a>
+        <a class="page-header__logo-link logo logo-2" href="index.html">
+          <img class="logo__sign" src="./img/images/logo-2.svg" width="101" height="19" alt="" aria-hidden="true">
+        </a>
         <button class="main-nav__burger" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <img src="img/images/burger.svg" alt="Меню бургер">
         </button>
+      </div>
+      <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--active">
             <a href="index.html">главная</a>
           </li>
           <li class="main-nav__item">
@@ -38,7 +50,11 @@
             <h1 class="banner__title">Функциональное питание для котов</h1>
             <p class="banner__descr">Занялся собой? Займись котом!</p>
           </div>
-          <img class="banner__product" src="img/pictures/product1.png" alt="">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/pictures/index-can.png 1x, ./img/pictures/index-can@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="./img/pictures/index-can-tablet1.png 1x, ./img/pictures/index-can-tablet1@2x.png 2x">
+            <img class="banner__product" src="./img/pictures/index-can-mobile1.png" srcset="./img/pictures/index-can-mobile1@2x.png 2x" alt="Пример нашего товар">
+          </picture>
           <a class="banner__link">подобрать программу</a>
         </div>
       </section>
@@ -99,9 +115,9 @@
 
       <section class="example container">
         <div class="example__container-wrapper">
-          <h2 class="example__title title">Живой пример</h2>
           <div class="example__wrapper">
             <div class="example__content">
+              <h2 class="example__title title">Живой пример</h2>
               <p class="example__descr">
                 Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
               </p>
@@ -123,7 +139,12 @@
               <div class="example__swiper-wrapper">
                 <ul class="example__swiper-list">
                   <li class="example__swiper-item">
-                    <img class="example__swiper-img" src="img/pictures/before-mobile1.png" alt="Было">
+                    <!-- <img class="example__swiper-img" src="img/pictures/before-mobile1.png" alt="Было"> -->
+                    <picture>
+                      <!-- <source media="(min-width: 1200px)" srcset="./img/pictures/index-can.png 1x, ./img/pictures/index-can@2x.png 2x"> -->
+                      <source media="(min-width: 768px)" srcset="./img/pictures/cat-fat.png 1x, ./img/pictures/cat-fat@2x.png 2x">
+                      <img class="example__swiper-img" src="./img/pictures/before-mobile1.png" srcset="./img/pictures/before-mobile1@2x.png 2x" alt="Было">
+                    </picture>
                   </li>
                   <!-- <li class="example__swiper-item">
                     <img class="example__swiper-img" src="img/pictures/after-mobile1.png" alt="Стало">
@@ -186,5 +207,18 @@
         </svg>
       </a>
     </footer>
+
+    <script>
+      const openBtn = document.querySelector('.main-nav__burger');
+      const nav = document.querySelector('.main-nav__list');
+      // const body = document.querySelector('body')
+
+      openBtn.addEventListener('click', e=> {
+          nav.classList.toggle('main-nav__list--visible')
+          openBtn.classList.toggle('main-nav__burger--opened')
+          // body.classList.toggle('body--locked')
+        }
+      )
+    </script>
   </body>
 </html>

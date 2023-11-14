@@ -33,11 +33,13 @@
   color: $black;
   font-weight: 400;
   border-top: 1px solid #d9d9d9;
-  // border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: 768px) {
     margin-bottom: 84px;
     font-size: 60px;
+    border-top: 1px solid transparent;
+    text-align: left;
+    padding-left: 0;
   }
 }
 
@@ -138,7 +140,7 @@
   height: 100px;
   // position: absolute;
   top: 0;
-  left: 35px;
+  left: 26px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     left: 72px;
@@ -149,7 +151,8 @@
     width: 172px;
     height: 196px;
 
-    img {
+    img,
+    picture {
       align-self: flex-end;
     }
   }
