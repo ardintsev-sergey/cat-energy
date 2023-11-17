@@ -135,7 +135,7 @@
   }
 }
 
-.example__swiper {
+.example__images {
   position: relative;
 
   @media (min-width: $desktop-width) {
@@ -143,7 +143,7 @@
   }
 }
 
-.example__swiper-wrapper {
+.example__images-wrapper {
   height: 280px;
 
   @media (min-width: $tablet-width) {
@@ -151,13 +151,47 @@
   }
 }
 
-.example__swiper-list {
+.example__images-list {
   @include zero-list;
-  // position: absolute;
-  // top: 0;
-  // right: 0;
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    padding: 0 58px;
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.example__images-item {
+  display: flex;
+  overflow: hidden;
+
+  img {
+    width: 594px;
+    height: 511px;
+    max-width: none;
+    margin-left: -45px;
+  }
+}
+
+.example__images-item--after {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    img {
+      margin-left: 0;
+      margin-right: -65px;
+    }
+  }
 }
 
 .example__switcher {
@@ -177,8 +211,16 @@
   }
 }
 
-.example__swiper-img {
+.example__images-img {
   @media (min-width: $tablet-width) {
     min-height: 511px;
+  }
+  display: flex;
+  overflow: hidden;
+
+  img {
+    width: 594px;
+    height: 511px;
+    max-width: none;
   }
 }

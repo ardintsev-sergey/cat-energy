@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <title>Cat Energy</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicon/180.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <script src="./js/burger.js" defer></script>
   </head>
   <body class="page__body">
     <!-- <header class="page-header container catalog__header">
@@ -33,23 +38,25 @@
     </header> -->
 
     <header class="page-header container catalog__header">
-      <a class="page-header__logo-link logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="./img/images/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="./img/images/logo-tablet.svg">
-          <img class="page-header__logo-image" src="./img/images/logo-mobile.svg" width="34" height="38" alt="Cat Energy">
-        </picture>
-      </a>
-      <a class="page-header__logo-link logo logo-2" href="index.html">
-        <img class="logo__sign" src="./img/images/logo-2.svg" width="101" height="19" alt="" aria-hidden="true">
-      </a>
-      <nav class="main-nav">
+      <div  class="page-header__bar">
+        <a class="page-header__logo-link logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/images/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/images/logo-tablet.svg">
+            <img class="page-header__logo-image" src="./img/images/logo-mobile.svg" width="34" height="38" alt="Cat Energy">
+          </picture>
+        </a>
+        <a class="page-header__logo-link logo logo-2" href="index.html">
+          <img class="logo__sign" src="./img/images/logo-2.svg" width="101" height="19" alt="" aria-hidden="true">
+        </a>
         <button class="main-nav__burger" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <img src="img/images/burger.svg" alt="Меню бургер">
         </button>
+      </div>
+      <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item">
+          <li class="main-nav__item ">
             <a href="index.html">главная</a>
           </li>
           <li class="main-nav__item">
@@ -101,9 +108,15 @@
                   <div class="selection__contacts-wrapper">
                     <label class="selection__contacts-label" for="email">E-mail:*
                         <input class="selection__contacts-input" id="email" type="email" placeholder="kuklachev@gmail.com">
+                        <svg class="selection__contacts-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                          <use xlink:href="./img/images/sprite.svg#icon-email"></use>
+                        </svg>
                     </label>
                     <label class="selection__contacts-label" for="tel">Телефон:*
                         <input class="selection__contacts-input" id="tel" type="tel" placeholder="8 (960) 900-60-90">
+                        <svg class="selection__contacts-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                          <use xlink:href="./img/images/sprite.svg#icon-phone"></use>
+                        </svg>
                     </label>
                   </div>
               </fieldset>
@@ -144,39 +157,50 @@
               <p>Санкт-Петербург</p>
             </address>
           </div>
-          <div class="location__map"></div>
+          <iframe class="location__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad224644410c55b2ed14431db75f96f5f9b20f7bae6f613c488ede772f53925b8&amp;source=constructor"></iframe>
         </section>
     </main>
 
     <footer class="footer container">
-      <a href="index.html">
-        <img class="footer__logo logo" src="img/images/logo-2.svg" alt="">
+      <a class="footer__logo" href="index.html">
+        <img class="footer__logo-img logo" src="img/images/logo-2.svg" alt="">
       </a>
+      <hr class="footer__line">
       <ul class="footer__socials">
         <li class="footer__social-item">
           <a class="footer__social-link footer__social-link--vk">
             <span class="visually-hidden">Вконтакте</span>
+            <svg width="29" height="18" fill="none">
+              <use xlink:href="./img/images/sprite.svg#icon-vk"></use>
+            </svg>
           </a>
         </li>
         <li class="footer__social-item">
           <a class="footer__social-link footer__social-link--ig">
             <span class="visually-hidden">Instagram</span>
+            <svg width="23" height="23" fill="none">
+              <use xlink:href="./img/images/sprite.svg#icon-instagram"></use>
+            </svg>
           </a>
         </li>
         <li class="footer__social-item">
           <a class="footer__social-link footer__social-link--fb">
             <span class="visually-hidden">Facebook</span>
+            <svg width="19" height="25" fill="none">
+              <use xlink:href="./img/images/sprite.svg#icon-facebook"></use>
+            </svg>
           </a>
         </li>
       </ul>
-      <div class="footer__copyright">
-        <a href="">
-          HTML Academy
-        </a>
-        <a href="">
-          <img src="img/images/htmlacademy.svg" alt="htmlacademy">
-        </a>
-      </div>
+      <hr class="footer__line">
+
+      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">Разработано в</span>
+        HTML Academy
+        <svg class="developer__image" width="27" height="34" >
+          <use xlink:href="./img/images/sprite.svg#icon-htmlacademy"></use>
+        </svg>
+      </a>
     </footer>
   </body>
 </html>

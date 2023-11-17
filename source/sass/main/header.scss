@@ -72,7 +72,7 @@
   @include zero-list;
   display: none;
   position: absolute;
-  top: 24px;
+  top: 17px;
   left: -100%;
   right: 0;
   z-index: 2;
@@ -80,6 +80,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    position: static;
   }
 
   &--visible {
@@ -102,6 +103,7 @@
   @media (min-width: $tablet-width) {
     border-top: 1px solid transparent;
     text-align: left;
+    background-color: transparent;
   }
 
   a {
@@ -138,7 +140,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -10px;
+    bottom: 5px;
     background-color: transparent;
     height: 2px;
 

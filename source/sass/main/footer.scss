@@ -54,24 +54,16 @@
   background-repeat: no-repeat;
   background-position: center;
   // background-size: 40px 40px;
-  width: 32px;
-  height: 22px;
+  // width: 32px;
+  // height: 22px;
   cursor: pointer;
 
-  &--vk {
-    background-image: url(../img/images/vk.svg);
+  &:hover {
+    color: $basic_green;
   }
 
-  &--ig {
-    width: 23px;
-    height: 23px;
-    background-image: url(../img/images/ig.svg);
-  }
-
-  &--fb {
-    width: 13px;
-    height: 27px;
-    background-image: url(../img/images/fb.svg);
+  &:active {
+    color: rgba($basic_green, 0.3);
   }
 }
 
@@ -85,11 +77,21 @@
   text-decoration: none;
   color: $special_dark-grey;
 
+
+
   @media (min-width: $tablet-width) {
     margin: 0;
     justify-content: end;
     width: auto;
     font-size: 16px;
+
+    &:hover {
+      color: $basic_green;
+    }
+
+    &:active {
+      color: rgba($basic_green, 0.3);
+    }
   }
 
   svg {

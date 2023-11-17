@@ -9,6 +9,7 @@
     <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./img/favicon/180.png">
     <link rel="manifest" href="./manifest.webmanifest">
+    <script src="./js/burger.js" defer></script>
   </head>
   <body class="page__body">
     <header class="page-header container">
@@ -51,11 +52,15 @@
             <p class="banner__descr">Занялся собой? Займись котом!</p>
           </div>
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="./img/pictures/index-can.webp 1x, ./img/pictures/index-can@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/pictures/index-can-tablet1.webp 1x, ./img/pictures/index-can-tablet1@2x.webp 2x">
+            <source type="image/webp" srcset="./img/pictures/index-can-mobile1.webp 1x, ./img/pictures/index-can-mobile1@2x.webp 2x">
+
             <source media="(min-width: 1200px)" srcset="./img/pictures/index-can.png 1x, ./img/pictures/index-can@2x.png 2x">
             <source media="(min-width: 768px)" srcset="./img/pictures/index-can-tablet1.png 1x, ./img/pictures/index-can-tablet1@2x.png 2x">
-            <img class="banner__product" src="./img/pictures/index-can-mobile1.png" srcset="./img/pictures/index-can-mobile1@2x.png 2x" alt="Пример нашего товар">
+            <img class="banner__product" width="280" height="270" src="./img/pictures/index-can-mobile1.png" srcset="./img/pictures/index-can-mobile1@2x.png 2x" alt="Корм Cat Energy Pro на 500 грамм">
           </picture>
-          <a class="banner__link">подобрать программу</a>
+          <a class="banner__link" href="./catalog.html">подобрать программу</a>
         </div>
       </section>
 
@@ -135,22 +140,21 @@
                 <p class="example__cost">Затраты на питание: <span>15&nbsp;000&nbsp;руб.</span> </p>
               </div>
             </div>
-            <div class="example__swiper">
-              <div class="example__swiper-wrapper">
-                <ul class="example__swiper-list">
-                  <li class="example__swiper-item">
-                    <!-- <img class="example__swiper-img" src="img/pictures/before-mobile1.png" alt="Было"> -->
+            <div class="example__images">
+                <ul class="example__images-list">
+                  <li class="example__images-item example__images-item--before">
                     <picture>
-                      <!-- <source media="(min-width: 1200px)" srcset="./img/pictures/index-can.png 1x, ./img/pictures/index-can@2x.png 2x"> -->
                       <source media="(min-width: 768px)" srcset="./img/pictures/cat-fat.png 1x, ./img/pictures/cat-fat@2x.png 2x">
-                      <img class="example__swiper-img" src="./img/pictures/before-mobile1.png" srcset="./img/pictures/before-mobile1@2x.png 2x" alt="Было">
+                      <img class="example__images-img" src="./img/pictures/before-mobile1.png" srcset="./img/pictures/before-mobile1@2x.png 2x" width="280" height="232" alt="Было">
                     </picture>
                   </li>
-                  <!-- <li class="example__swiper-item">
-                    <img class="example__swiper-img" src="img/pictures/after-mobile1.png" alt="Стало">
-                  </li> -->
+                  <li class="example__images-item example__images-item--after">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="./img/pictures/cat-skinny.png 1x, ./img/pictures/cat-skinny@2x.png 2x">
+                      <img class="example__images-img" src="./img/pictures/after-mobile1.png" srcset="./img/pictures/after-mobile1@2x.png 2x" width="280" height="232" alt="Стало">
+                    </picture>
+                  </li>
                 </ul>
-              </div>
               <div class="example__switcher">
                 <button class="example__switcher-btn" type="button">Было</button>
                 <div class="example__switcher-toggler"></div>
@@ -171,7 +175,7 @@
             <p>Санкт-Петербург</p>
           </address>
         </div>
-        <div class="location__map"></div>
+        <iframe class="location__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad224644410c55b2ed14431db75f96f5f9b20f7bae6f613c488ede772f53925b8&amp;source=constructor"></iframe>
       </section>
     </main>
 
@@ -184,16 +188,25 @@
         <li class="footer__social-item">
           <a class="footer__social-link footer__social-link--vk">
             <span class="visually-hidden">Вконтакте</span>
+            <svg width="29" height="18" fill="none">
+              <use xlink:href="./img/images/sprite.svg#icon-vk"></use>
+            </svg>
           </a>
         </li>
         <li class="footer__social-item">
           <a class="footer__social-link footer__social-link--ig">
             <span class="visually-hidden">Instagram</span>
+            <svg width="23" height="23" fill="none">
+              <use xlink:href="./img/images/sprite.svg#icon-instagram"></use>
+            </svg>
           </a>
         </li>
         <li class="footer__social-item">
           <a class="footer__social-link footer__social-link--fb">
             <span class="visually-hidden">Facebook</span>
+            <svg width="19" height="25" fill="none">
+              <use xlink:href="./img/images/sprite.svg#icon-facebook"></use>
+            </svg>
           </a>
         </li>
       </ul>
@@ -202,23 +215,10 @@
       <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="visually-hidden">Разработано в</span>
         HTML Academy
-        <svg class="developer__image" width="27" height="34" viewBox="0 0 27 34">
-          <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="currentColor"/>
+        <svg class="developer__image" width="27" height="34" >
+          <use xlink:href="./img/images/sprite.svg#icon-htmlacademy"></use>
         </svg>
       </a>
     </footer>
-
-    <script>
-      const openBtn = document.querySelector('.main-nav__burger');
-      const nav = document.querySelector('.main-nav__list');
-      // const body = document.querySelector('body')
-
-      openBtn.addEventListener('click', e=> {
-          nav.classList.toggle('main-nav__list--visible')
-          openBtn.classList.toggle('main-nav__burger--opened')
-          // body.classList.toggle('body--locked')
-        }
-      )
-    </script>
   </body>
 </html>

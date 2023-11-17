@@ -7,31 +7,11 @@
 
 .location__map {
   height: 362px;
-  background: no-repeat center 100%/100% url(../img/pictures/map-mobile.png);
+  width: 100%;
   z-index: -1;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url(../img/pictures/map-mobile@2.png);
-    background-size: 640px auto;
-  }
 
   @media (min-width: $tablet-width) {
     height: 400px;
-    background: url(../img/pictures/map-tablet.png);
-
-    @media (min-resolution: 2dppx) {
-      background-image: url(../img/pictures/map-tablet@2.png);
-      background-size: 1536px auto;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    background: url(../img/pictures/map.png);
-
-    @media (min-resolution: 2dppx) {
-      background-image: url(../img/pictures/map@2.png);
-      background-size: 2880px auto;
-    }
   }
 }
 

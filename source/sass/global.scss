@@ -80,3 +80,7 @@ img {
     line-height: 60px;
   }
 }
+
+hr {
+  @include zero-margin;
+}
