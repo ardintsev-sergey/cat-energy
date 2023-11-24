@@ -8,12 +8,12 @@
     background-repeat: no-repeat;
     background-position: 50% 0;
     // background-size: auto 302px;
-    background-image: url("../../img/pictures/banner/banner-mobile.jpg"),
+    background-image: url("../img/pictures/banner/banner-mobile.jpg"),
       linear-gradient($basic_green 0, $basic_green 302px, $white 302px);
 
     @media (min-resolution: 2dppx) {
       background-size: auto 302px, auto;
-      background-image: url("../../img/pictures/banner/banner-mobile@2x.jpg"),
+      background-image: url("../img/pictures/banner/banner-mobile@2x.jpg"),
         linear-gradient($basic_green 0, $basic_green 302px, $white 302px);
     }
   }
@@ -41,7 +41,7 @@
       background-color: $basic_green;
       background-position: 0 100%;
       background-repeat: no-repeat;
-      background-image: url("../../img/pictures/banner/banner.jpg");
+      background-image: url("../img/pictures/banner/banner.jpg");
 
       @media (min-resolution: 2dppx) {
         background-size: auto 696px;
@@ -142,6 +142,7 @@
   color: $white;
   justify-self: center;
   text-align: center;
+  text-decoration: none;
 
   @media (min-width: $tablet-width) {
     width: 244px;
